@@ -2,7 +2,8 @@ import { join } from 'path';
 import { extensions, workspace } from 'vscode';
 
 const LUA_PATH = join(
-	extensions.getExtension('ardelanyamanel.fivem-esx-snippets')!.extensionPath,
+	extensions.getExtension('ardelanyamanel.fivem-esx-intellisense')!
+		.extensionPath,
 	'plugin.lua',
 );
 
