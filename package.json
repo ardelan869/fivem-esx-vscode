@@ -1,6 +1,6 @@
 {
-  "name": "fivem-esx-snippets",
-  "displayName": "fivem-esx-snippets",
+  "name": "fivem-esx-intellisense",
+  "displayName": "ESX IntelliSense (FiveM)",
   "description": "An ESX Snippet Extension for Microsoft VSCode",
   "publisher": "ardelanyamanel",
   "version": "0.0.1",
