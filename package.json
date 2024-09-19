@@ -1,9 +1,10 @@
 {
   "name": "fivem-esx-intellisense",
   "displayName": "ESX IntelliSense (FiveM)",
-  "description": "An ESX Snippet Extension for Microsoft VSCode",
+  "description": "ESX IntelliSense for FiveM",
   "publisher": "ardelanyamanel",
-  "version": "0.0.1",
+  "icon": "images/es_extended.png",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.76.0"
   },
