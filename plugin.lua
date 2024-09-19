@@ -674,7 +674,7 @@ function ESX.Game.GetPlayers(onlyOtherPlayers, returnKeyValue, returnPeds) end
 --- `CLIENT`
 ---
 ---@param coords vector3 | vector4 | { x: number, y: number, z: number }
----@param modelFilter? table<string, true>
+---@param modelFilter? table<number, true>
 ---@return number object
 ---@return number distance
 function ESX.Game.GetClosestObject(coords, modelFilter) end
@@ -686,7 +686,7 @@ function ESX.Game.GetClosestObject(coords, modelFilter) end
 --- `CLIENT`
 ---
 ---@param coords? vector3 | vector4 | { x: number, y: number, z: number }
----@param modelFilter? table<string, true>
+---@param modelFilter? table<number, true>
 ---@return number ped
 ---@return number distance
 function ESX.Game.GetClosestPed(coords, modelFilter) end
@@ -709,7 +709,7 @@ function ESX.Game.GetClosestPlayer(coords) end
 --- `CLIENT`
 ---
 ---@param coords? vector3 | vector4 | { x: number, y: number, z: number }
----@param modelFilter? table<string, true>
+---@param modelFilter? table<number, true>
 ---@return number vehicle
 ---@return number distance
 function ESX.Game.GetClosestVehicle(coords, modelFilter) end
@@ -745,7 +745,7 @@ function ESX.Game.GetVehiclesInArea(coords, maxDistance) end
 ---@param entities number[]
 ---@param isPlayerEntities? boolean
 ---@param coords? vector3 | vector4 | { x: number, y: number, z: number }
----@param modelFilter? table<string, true>
+---@param modelFilter? table<number, true>
 ---@return number entity
 ---@return number distance
 function ESX.Game.GetClosestEntity(entities, isPlayerEntities, coords, modelFilter) end
