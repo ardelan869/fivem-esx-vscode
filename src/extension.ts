@@ -16,6 +16,10 @@ export async function activate() {
 		return console.error('library is not an array');
 	}
 
+	if (library.includes(LUA_PATH)) {
+		return console.warn('plugin.lua already added to library');
+	}
+
 	await config.update(
 		'workspace.library',
 		[...library, LUA_PATH],
@@ -32,11 +36,9 @@ export async function deactivate() {
 		return console.error('library is not an array');
 	}
 
-	library.splice(library.indexOf(LUA_PATH), 1);
-
 	await config.update(
 		'workspace.library',
-		library,
+		library.filter((f) => f !== LUA_PATH),
 		workspace.workspaceFile ? 2 : 1,
 	);
 }
