@@ -195,6 +195,8 @@ ESX.Math = {};
 ESX.Table = {};
 ESX.OneSync = {};
 
+exports.es_extended = {};
+
 --- `CLIENT`, `SERVER`
 ---
 ---@return ESX
