@@ -462,10 +462,10 @@ function ESX.UI.Menu.RegisterType(menuType, open, close) end
 ---@param namespace string
 ---@param name string
 ---@param data ESXMenuData
----@param submit ESXMenuCallback
----@param cancel ESXMenuCallback
----@param change ESXMenuCallback
----@param close ESXMenuCallback
+---@param submit? ESXMenuCallback
+---@param cancel? ESXMenuCallback
+---@param change? ESXMenuCallback
+---@param close? ESXMenuCallback
 ---@return ESXMenu
 function ESX.UI.Menu.Open(menuType, namespace, name, data, submit, cancel, change, close) end
 
@@ -1489,7 +1489,7 @@ function ESX.GetNumPlayers(key, val) end
 ---
 --- `SERVER`
 ---
----@param source number | string
+---@param source number
 ---@return xPlayer
 function ESX.GetPlayerFromId(source) end
 
@@ -1507,7 +1507,7 @@ function ESX.GetPlayerFromIdentifier(identifier) end
 ---
 --- `SERVER`
 ---
----@param playerId string
+---@param playerId number | string
 ---@return string
 function ESX.GetIdentifier(playerId) end
 
