@@ -448,7 +448,13 @@ function ESX.UI.Menu.RegisterType(menuType, open, close) end
 ---@field setTitle fun(newTitle: string)
 ---@field removeElement fun(query: table)
 
----@alias ESXMenuCallback fun(data: ESXMenuData, menu: ESXMenu)
+---@class ESXMenuCallbackData
+---@field _namespace string
+---@field _name string
+---@field current ESXMenuElement
+---@field elements ESXMenuElement[]
+
+---@alias ESXMenuCallback fun(data: ESXMenuCallbackData, menu: ESXMenu)
 
 ---@alias ESXMenuType 'menu' | 'dialog' | string
 
