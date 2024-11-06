@@ -422,8 +422,7 @@ function ESX.RegisterInput(command_name, label, input_group, key, on_press, on_r
 ---@param close ESXMenuTypeCallback
 function ESX.UI.Menu.RegisterType(menuType, open, close) end
 
----@class ESXMenuElement
----@field label string
+---@alias ESXMenuElement { label: string } | table<string, any>
 
 ---@class ESXMenuData
 ---@field title string
