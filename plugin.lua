@@ -114,7 +114,7 @@
 ---@field coords vector3
 ---@field group string
 ---@field identifier string
----@field job ESXJob
+---@field job ESXPlayerJob
 ---@field loadout ESXLoadoutWeapon[]
 ---@field name string
 ---@field playerId number
@@ -141,7 +141,7 @@
 ---@field getAccounts (fun(): ESXPlayerAccount[]) | (fun(minimal: true): table<string, number>)
 ---@field getAccount fun(account: string): ESXPlayerAccount?
 ---@field getInventory (fun(): ESXItem[]) | (fun(minimal: true): table<string, number>)
----@field getJob fun(): ESXJob
+---@field getJob fun(): ESXPlayerJob
 ---@field getLoadout fun(minimal: boolean): ESXLoadoutWeapon[]
 ---@field getName fun(): string
 ---@field setName fun(newName: string)
@@ -426,7 +426,7 @@ function ESX.UI.Menu.RegisterType(menuType, open, close) end
 
 ---@class ESXMenuData
 ---@field title string
----@field elements ESXMenuElement[]
+---@field elements? ESXMenuElement[]
 ---@field align? 'left' | 'top-left' | 'top' | 'top-right' | 'right' | 'bottom-right' | 'bottom' | 'bottom-left' | 'center' | string
 ---@field type? 'big' | 'default' | string
 
@@ -450,8 +450,9 @@ function ESX.UI.Menu.RegisterType(menuType, open, close) end
 ---@class ESXMenuCallbackData
 ---@field _namespace string
 ---@field _name string
----@field current ESXMenuElement
----@field elements ESXMenuElement[]
+---@field value? string;
+---@field current? ESXMenuElement
+---@field elements? ESXMenuElement[]
 
 ---@alias ESXMenuCallback fun(data: ESXMenuCallbackData, menu: ESXMenu)
 
