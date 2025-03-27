@@ -38,7 +38,9 @@ export async function deactivate() {
 
   await config.update(
     'workspace.library',
-    library.filter((f) => !f.endsWith('plugin.lua') && !f.endsWith('lua')),
+    library.filter(
+      (f: string) => f.search('ardelanyamanel.fivem-esx-intellisense') === -1,
+    ),
     workspace.workspaceFile ? 2 : 1,
   );
 }
