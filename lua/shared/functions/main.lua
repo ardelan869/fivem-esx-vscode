@@ -142,6 +142,7 @@ function ESX.GetWeaponFromHash(weaponHash) end
 ---
 ---@overload fun(byHash: false | nil): ESXConfigWeapon[]
 ---@overload fun(byHash: true): table<number, ESXConfigWeapon>
+---@return table<number, ESXConfigWeapon> | ESXConfigWeapon[]
 function ESX.GetWeaponList(byHash) end
 
 --- Returns the label of the specified weapon.

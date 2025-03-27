@@ -133,6 +133,7 @@ function ESX.RegisterCommand(name, group, cb, allowConsole, suggestion) end
 ---
 ---@overload fun(key?: nil, val?: nil): xPlayer[]
 ---@overload fun(key: string, val: any | any[]): xPlayer[]
+---@return xPlayer[]
 function ESX.GetExtendedPlayers(key, val) end
 
 --- This function returns the amount of players online and if a filter is applied that match the filter.
@@ -144,6 +145,7 @@ function ESX.GetExtendedPlayers(key, val) end
 ---@overload fun(key?: nil, val?: nil): number
 ---@overload fun(key: string, val: any): number
 ---@overload fun(key: string, val: any[]): number[]
+---@return number | number[]
 function ESX.GetNumPlayers(key, val) end
 
 --- This function returns the xPlayer object of the specified playerId.
@@ -275,7 +277,7 @@ function ESX.GetItemLabel(item) end
 ---
 --- `SERVER`
 ---
----@return table<string, ESXJob>
+---@return table<string, ESXServerJob>
 function ESX.GetJobs() end
 
 --- This function returns all items.

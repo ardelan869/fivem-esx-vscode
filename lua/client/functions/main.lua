@@ -54,6 +54,17 @@
 ---@field name string
 ---@field sex string
 
+---@class ESXProgressBarAnimationOptions
+---@field type 'anim' | 'Scenario'
+---@field lib string
+---@field dict string
+
+---@class ESXProgressBarOptions
+---@field animation ESXProgressBarAnimationOptions
+---@field FreezePlayer? boolean
+---@field onFinish? fun()
+---@field onCancel? fun()
+
 ---@alias ESXVehicleType 'bike' | 'trailer' | 'boat' | 'heli' | 'plane' | 'train'
 
 --- This function will return a `bool` if the player has sucessfully loaded. This should be checked before manipulating or checking data of the player.
@@ -81,6 +92,7 @@ function ESX.GetPlayerData() end
 ---
 ---@overload fun(items: string | string[], count: false): table<string, ESXItem>
 ---@overload fun(items: string | string[], count: true): table<string, number>
+---@return table<string, ESXItem | number>
 function ESX.SearchInventory(items, count) end
 
 --- Sets the player's local data.

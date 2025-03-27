@@ -7,8 +7,9 @@
 ---@class ESXMenuCallbackData
 ---@field _namespace string
 ---@field _name string
+---@field value? any
 ---@field current ESXMenuElement | string
----@field elements ESXMenuElement[]
+---@field elements? ESXMenuElement[]
 
 ---@alias ESXMenuCallback fun(data: ESXMenuCallbackData, menu: ESXMenuBase)
 
@@ -24,9 +25,11 @@
 ---@field type? 'big' | 'default' | string
 ---@field title string
 ---@field align? 'left' | 'top-left' | 'top' | 'top-right' | 'right' | 'bottom-right' | 'bottom' | 'bottom-left' | 'center' | string
----@field elements ESXMenuElement[]
+---@field elements? ESXMenuElement[]
 
 ---@alias ESXMenuType 'default' | 'dialog' | string
+
+---@alias ESXMenuTypeCallback fun(namespace: string, name: string)
 
 ---@class ESXMenuBase
 ---@field type ESXMenuType
@@ -117,7 +120,7 @@ function ESX.UI.Menu.CloseAll() end
 ---@param menuType ESXMenuType
 ---@param namespace string
 ---@param name string
----@return ESXMenu
+---@return ESXMenuBase
 function ESX.UI.Menu.GetOpened(menuType, namespace, name) end
 
 ESX.UI.Menu.IsOpen = ESX.UI.Menu.GetOpened;
@@ -126,5 +129,5 @@ ESX.UI.Menu.IsOpen = ESX.UI.Menu.GetOpened;
 ---
 --- `CLIENT`
 ---
----@return ESXMenu[]
+---@return ESXMenuBase[]
 function ESX.UI.Menu.GetOpenedMenus() end
