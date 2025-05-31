@@ -119,7 +119,7 @@ function ESX.TriggerClientEvent(eventName, playerIds, ...) end
 --- `SERVER`
 ---
 ---@param name string | string[]
----@param group string
+---@param group string | string[]
 ---@param cb fun(xPlayer: xPlayer | false, args: table<string, string | number | xPlayer>, error: fun(message: string))
 ---@param allowConsole? boolean
 ---@param suggestion? ESXCommandSuggestion[]
