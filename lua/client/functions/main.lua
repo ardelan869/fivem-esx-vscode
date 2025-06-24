@@ -50,6 +50,7 @@
 ---@field identifier string
 ---@field inventory ESXItem[]
 ---@field loadout ESXLoadoutWeapon[]
+---@field metadata table<string, any>
 ---@field money number
 ---@field name string
 ---@field sex string
