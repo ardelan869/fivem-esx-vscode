@@ -5,9 +5,9 @@
 ---@meta
 
 ---@class ESXCommandSuggestion
----@field help string
----@field validate boolean
----@field arguments ESXCommandArgument[]
+---@field help? string
+---@field validate? boolean
+---@field arguments? ESXCommandArgument[]
 
 ---@class ESXCommandArgument
 ---@field name string
@@ -122,7 +122,7 @@ function ESX.TriggerClientEvent(eventName, playerIds, ...) end
 ---@param group string | string[]
 ---@param cb fun(xPlayer: xPlayer | false, args: table<string, string | number | xPlayer>, error: fun(message: string))
 ---@param allowConsole? boolean
----@param suggestion? { help?: string; validate?: boolean; arguments?: ESXCommandSuggestion[] }
+---@param suggestion? ESXCommandSuggestion
 function ESX.RegisterCommand(name, group, cb, allowConsole, suggestion) end
 
 --- This function returns all loaded xPlayers and if a filter is applied that match the filter.
