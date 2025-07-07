@@ -15,6 +15,7 @@ ESX.OneSync = {};
 ---@param source vector3 | number playerId or vector3 coordinates
 ---@param maxDistance number
 ---@param ignore? table<number, true> playerIds to ignore, where the key is playerId and value is true
+---@return { id: number; ped: number; coords: vector3; dist: number; }[]
 function ESX.OneSync.GetPlayersInArea(source, maxDistance, ignore) end
 
 --- This function returns the closest player from the given player.
