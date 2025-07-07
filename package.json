@@ -4,7 +4,7 @@
   "description": "ESX IntelliSense for FiveM",
   "publisher": "ardelanyamanel",
   "icon": "images/es_extended.png",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "engines": {
     "vscode": "^1.76.0"
   },
