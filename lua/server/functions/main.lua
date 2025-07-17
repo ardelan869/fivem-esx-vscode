@@ -136,6 +136,13 @@ function ESX.RegisterCommand(name, group, cb, allowConsole, suggestion) end
 ---@return xPlayer[]
 function ESX.GetExtendedPlayers(key, val) end
 
+--- This function returns all active players.
+---
+--- `SERVER`
+---
+---@return number[]
+function ESX.GetPlayers() end
+
 --- This function returns the amount of players online and if a filter is applied that match the filter.
 ---
 --- [View documentation](https://docs.esx-framework.org/en/esx_core/es_extended/server/functions#getnumplayers)
