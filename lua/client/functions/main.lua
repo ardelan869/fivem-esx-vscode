@@ -35,6 +35,7 @@
 ---@field count number
 ---@field label string
 ---@field weight number
+---@field limit number
 ---@field usable boolean
 ---@field rare boolean
 ---@field canRemove boolean
